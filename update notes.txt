@@ -1,2 +1,0 @@
-update notes: 5/27/2018
-was able to get it to show color when a form is moved on from. green if there is imput, red if there is not. am working hard to get it to expand medical update when there is a click. will change it to popup upon next touch. was also able to get it to cause a popup when new medicine is selected. this will allow them to easily add new medicines.
