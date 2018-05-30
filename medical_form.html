@@ -1,0 +1,54 @@
+<!Doctype HTML>
+<html>
+<head>
+<title> Javascript expansion</title>
+<script type='text/javascript'>
+function addmeds(){
+if (document.getElementById('medtak').value=='add'){
+E = window.prompt(
+"please enter new medicine "
+);
+
+document.getElementById('medUp').value +=E;
+if (document.getElementById('medtak').value=='add'){
+document.getElementById('medtak').value="none";
+}
+}
+}
+
+
+function change(){
+
+var a = document.getElementById("fname").value;
+var c = document.getElementById("lname").value;
+
+if ( a=='' || a==null){
+document.getElementById('fname').style.backgroundColor="red";
+}
+else{
+document.getElementById('fname').style.backgroundColor="green";
+}
+if ( c=='' || c==null){
+document.getElementById('lname').style.backgroundColor="red";
+}
+else{
+document.getElementById('lname').style.backgroundColor="green";
+}
+}
+</script>
+</head>
+<body>
+<form name="form" id="form" >
+First Name: &emsp; &nbsp; <input onchange="change()" type="textbox" id='fname' name="First_Name"/> &emsp; Last Name: <input type="textbox" name="Last_Name" id="lname" onchange="change()" /> <br/> <br/>
+Date: &emsp; &emsp; &emsp; &nbsp; <input type="date" name="Diagnosis_Date" /> <br/><br/>
+Medical Update: <textarea cols='25' row='5' name="medUp" id="medUp" onclick="enlarge()" ></textarea><br/><br/>
+medicine's taken: <select onchange="addmeds()" id="medtak" name='medstak'>
+<option>none</option>
+<option>add</option>
+</select><br/><br/>
+Patient improved?: <select> <option>Yes </option> <option>No</option> <option> N/A</option></select><br/><br/>
+
+<input type="submit" name="submit" />
+</form>
+</body>
+</html>
